@@ -1,0 +1,11 @@
+--- a/init/chromeos_startup.sh
++++ b/init/chromeos_startup.sh
+@@ -776,6 +776,8 @@
+   fi
+ fi
+ 
++. /usr/share/cros/jemaos_factory_install.sh
++
+ bootstat post-startup
+ 
+ # Always return success to avoid killing init

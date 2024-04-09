@@ -1,0 +1,42 @@
+--- a/tpm_manager/client/tpm_manager_utility.cc
++++ b/tpm_manager/client/tpm_manager_utility.cc
+@@ -74,7 +74,8 @@
+       &org::chromium::TpmManagerProxyInterface::GetTpmStatusAsync, tpm_owner_,
+       request, &tpm_status);
+   if (tpm_status.status() != tpm_manager::STATUS_SUCCESS) {
+-    LOG(ERROR) << __func__ << ": Failed to read TPM state from tpm_managerd.";
++    //LOG(ERROR) << __func__ << ": Failed to read TPM state from tpm_managerd.";
++    VLOG(1) << __func__ << ": Failed to read TPM state from tpm_managerd.";
+     return false;
+   }
+   *is_enabled = tpm_status.enabled();
+--- a/tpm_manager/server/tpm_manager_service.cc
++++ b/tpm_manager/server/tpm_manager_service.cc
+@@ -261,14 +261,14 @@
+ 
+   TpmStatus::TpmOwnershipStatus ownership_status;
+   if (!tpm_status_->GetTpmOwned(&ownership_status)) {
+-    LOG(ERROR) << __func__
++    VLOG(1) << __func__
+                << ": failed to get tpm ownership status, maybe it's the "
+                   "dictionary attack lockout.";
+     // GetStatus could fail because the TPM is under DA lockout, so we'll try to
+     // reset lockout then try again.
+     ResetDictionaryAttackCounterIfNeeded();
+     if (!tpm_status_->GetTpmOwned(&ownership_status)) {
+-      LOG(ERROR) << __func__
++      VLOG(1) << __func__
+                  << ": get tpm ownership status still failed. Giving up.";
+       reply->set_status(STATUS_DEVICE_ERROR);
+       return reply;
+--- a/tpm_manager/server/tpm_status_impl.cc
++++ b/tpm_manager/server/tpm_status_impl.cc
+@@ -109,7 +109,7 @@
+   const std::optional<TpmStatus::TpmOwnershipStatus> owner_password_status =
+       TestTpmWithDefaultOwnerPassword();
+   if (!owner_password_status.has_value()) {
+-    LOG(ERROR) << __func__ << ": Failed to test default owner password.";
++    VLOG(1) << __func__ << ": Failed to test default owner password.";
+     return false;
+   }
+ 
