@@ -1,4 +1,4 @@
-# Copyright (c) 2022 jema Innovations Limited and the jemaos Authors.
+# Copyright (c) 2022 Jema Technology.
 # Distributed under the license specified in the root directory of this project.
 
 # Copyright 2017 The Chromium OS Authors. All rights reserved.

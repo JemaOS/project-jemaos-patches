@@ -1,10 +1,10 @@
 From 19468a0adbb6c14d9df031448973855ca7bc0538 Mon Sep 17 00:00:00 2001
-From: jinqiang zhang <jinqiang@jemaos.io>
+From: john doe <johndoe@gmail.com>
 Date: Wed, 25 May 2022 11:54:36 +0000
 Subject: [PATCH] HID: add support for Microsoft devices and weibu tablet
 
-Signed-off-by: jinqiang zhang <jinqiang@jemaos.io>
-Signed-off-by: Su Yue <glass@jemaos.io>
+Signed-off-by: john doe <johndoe@gmail.com>
+Signed-off-by: John Doe <johndoe@gmail.com>
 Change-Id: I43ffc215d2432bb4f573ee4e303c06ba14d64a1b
 ---
  .../gpu/drm/drm_panel_orientation_quirks.c    |   6 +

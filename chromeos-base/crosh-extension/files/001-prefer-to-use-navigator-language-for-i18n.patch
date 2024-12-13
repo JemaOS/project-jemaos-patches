@@ -1,8 +1,8 @@
-From: Fangzhou Chen <fangzhou@jemaos.io>
+From: John Doe <johndoe@gmail.com>
 Date: Fri, 23 Dec 2022 04:39:01 +0000
 Subject: Prefer to use navigator.language over navigator.languages
 Reference: https://jemaos.atlassian.net/browse/OS-198
-Signed-off-by: Fangzhou Chen <fangzhou@jemaos.io>
+Signed-off-by: John Doe <johndoe@gmail.com>
 
 --- a/libdot/js/lib_i18n.js
 +++ b/libdot/js/lib_i18n.js

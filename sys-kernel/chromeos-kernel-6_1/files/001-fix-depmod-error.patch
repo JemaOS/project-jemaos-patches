@@ -1,5 +1,5 @@
 From 54c51b7591d047244edfc2925a03160916128e8f Mon Sep 17 00:00:00 2001
-From: Su Yue <glass@jemaos.io>
+From: John Doe <johndoe@gmail.com>
 Date: Fri, 13 Jan 2023 10:59:03 +0800
 Subject: [PATCH] Revert "FROMLIST: drm_bridge: register content protect
  property"

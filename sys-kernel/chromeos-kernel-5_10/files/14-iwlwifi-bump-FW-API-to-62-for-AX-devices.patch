@@ -6,7 +6,7 @@ Subject: [PATCH] iwlwifi: bump FW API to 62 for AX devices
 Start supporting API version 62 for AX devices.
 
 Signed-off-by: Luca Coelho <luciano.coelho@intel.com>
-Signed-off-by: Su Yue <glass@jemaos.io>
+Signed-off-by: John Doe <johndoe@gmail.com>
 ---
  drivers/net/wireless/intel/iwlwifi/cfg/22000.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
